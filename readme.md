@@ -56,3 +56,35 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+提交代码#
+$ git add -A
+$ git commit -m "Finish layout and routes"
+$ git checkout master
+
+$ git status
+git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+    modified:   public/css/app.css
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+    public/mix-manifest.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+
+解决git 冲突 
+$ git checkout .
+$ rm -f public/mix-manifest.json
+$ git merge filling-layout-style
+
+$ git push
+$ git push heroku master
