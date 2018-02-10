@@ -88,3 +88,12 @@ $ git merge filling-layout-style
 
 $ git push
 $ git push heroku master
+
+前端工作流
+在根目录下运行 watch-poll 依赖 package.json
+$ npm run watch-poll
+watch-poll 会在你的终端里持续运行，监控 resources 文件夹下的资源文件是否有发生改变。
+
+最后让我们对数据库进行重置和填充。
+
+$ php artisan migrate:refresh --seed
