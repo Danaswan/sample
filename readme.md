@@ -97,3 +97,12 @@ watch-poll 会在你的终端里持续运行，监控 resources 文件夹下的�
 最后让我们对数据库进行重置和填充。
 
 $ php artisan migrate:refresh --seed
+
+Carbon 是 PHP DateTime 的一个简单扩展，
+对 Carbon 进行本地化的设置很简单，只在 AppServiceProvider 中调用 Carbon 的 setLocale 方法即可
+use Carbon\Carbon;
+
+ public function boot()
+    {
+        Carbon::setLocale('zh');
+    }
